@@ -1,0 +1,845 @@
+% Set the document class to Beamer with desired options.
+\documentclass[compress]{beamer}
+% \documentclass[compress, aspectratio=169]{beamer} % For 16:9 aspect ratio
+% \documentclass[compress, handout]{beamer} % For handout version
+
+% ===========================================================
+%               Beamer Theme and Color Settings
+% ===========================================================
+
+% ===========================
+% === Outer Theme Options ===
+% ===========================
+
+% Set the outer theme.
+% Available options:
+% - 'shadow': adds subtle shadows around frames.
+% - 'smoothbars': sleek, smooth navigation bars.
+% - 'split': split frame appearance in the navigation area.
+% - 'sidebar': places the navigation in a sidebar.
+% - 'tree': hierarchical navigation.
+% - 'miniframes': miniature frames as navigation symbols.
+% - 'default': standard Beamer navigation.
+
+% Define the outer theme here:
+\newcommand{\outertheme}{shadow} % Change this to your desired outer theme.
+
+% Use the selected outer theme.
+\useoutertheme{\outertheme}
+
+% If you want to pass options to the outer theme, you can define them here.
+% For example, to disable subsections in miniframes:
+% \useoutertheme[subsection=false]{miniframes}
+
+% ===========================
+% === Inner Theme Options ===
+% ===========================
+
+% Set the inner theme.
+% Available options:
+% - 'rounded': rounded corners for elements.
+% - 'rectangles': rectangular elements with sharp corners.
+% - 'inmargin': section titles in the margin.
+% - 'circles': circular bullets in lists.
+
+% Define the inner theme here:
+\newcommand{\innertheme}{rounded} % Change this to your desired inner theme.
+
+% Use the selected inner theme.
+\useinnertheme[shadow=true]{\innertheme}
+
+% ===========================
+% === Color Theme Options ===
+% ===========================
+% Define custom color schemes using \definecolor and \setbeamercolor.
+% Define color schemes with artistic choices
+\definecolor{Rich_Red}{RGB}{164, 0, 0} % Rich Red for scheme 1
+\definecolor{Light_Pink}{RGB}{255, 230, 230} % Light Pink for scheme 1
+
+\definecolor{Deep_Blue}{RGB}{0, 70, 173} % Deep Blue for scheme 2
+\definecolor{Light_Blue}{RGB}{220, 235, 255} % Light Blue for scheme 2
+
+\definecolor{Teal}{RGB}{0, 128, 128} % Teal for scheme 3
+\definecolor{Light_Cyan}{RGB}{224, 255, 255} % Light Cyan for scheme 3
+
+\definecolor{Orange}{RGB}{255, 165, 0} % Orange for scheme 4
+\definecolor{Light_Orange}{RGB}{255, 244, 224} % Light Orange for scheme 4
+
+\definecolor{Forest_Green}{RGB}{34, 139, 34} % Forest Green for scheme 5
+\definecolor{Light_Green}{RGB}{224, 255, 224} % Light Green for scheme 5
+
+\definecolor{Steel_Blue}{RGB}{70, 130, 180} % Steel Blue for scheme 6
+\definecolor{Light_Steel_Blue}{RGB}{235, 245, 255} % Light Steel Blue for scheme 6
+
+\definecolor{Deep_Wine}{rgb}{0.5, 0.05, 0.20} % Deep Wine for scheme 7
+\definecolor{White}{rgb}{1, 1, 1} % White for scheme 7
+
+\definecolor{Crimson}{rgb}{0.66, 0.06, 0.24} % Crimson for scheme 8
+\definecolor{White}{rgb}{1, 1, 1} % White for scheme 8
+
+\definecolor{Indigo}{RGB}{75, 0, 130} % Indigo for scheme 9
+\definecolor{Light_Lavender}{RGB}{240, 230, 255} % Light Lavender for scheme 9
+
+\definecolor{Hot_Pink}{RGB}{255, 105, 180} % Hot Pink for scheme 10
+\definecolor{Light_Pink}{RGB}{255, 230, 240} % Light Pink for scheme 10
+
+\definecolor{Gold}{RGB}{255, 215, 0} % Gold for scheme 11
+\definecolor{Light_Gold}{RGB}{255, 245, 224} % Light Gold for scheme 11
+
+\definecolor{Purple}{RGB}{128, 0, 128} % Purple for scheme 12
+\definecolor{Light_Purple}{RGB}{244, 224, 255} % Light Purple for scheme 12
+% Define custom colors.
+\definecolor{Rich_Red}{RGB}{164, 0, 0} % Rich Red
+\definecolor{Light_Pink}{RGB}{255, 230, 230} % Light Pink
+% (Other colors are defined similarly.)
+
+% Define commands to set color schemes.
+% Example for Color Scheme 1:
+\newcommand{\setcolorschemeone}{
+    \setbeamercolor{structure}{fg=Rich_Red} % Set structure color for scheme 1
+    \setbeamercolor{titlelike}{parent=structure, bg=Rich_Red, fg=white} % Set title color for scheme 1
+    \setbeamercolor{itemize item}{fg=Rich_Red} % Set item color for scheme 1
+    \setbeamercolor{itemize subitem}{fg=Rich_Red} % Set subitem color for scheme 1
+    \setbeamercolor{itemize subsubitem}{fg=Rich_Red} % Set subsubitem color for scheme 1
+    \setbeamercolor{block title}{bg=Rich_Red, fg=white} % Set block title color for scheme 1
+    \setbeamercolor{block body}{bg=Light_Pink, fg=black} % Set block body color for scheme 1
+}
+
+\newcommand{\setcolorschemetwo}{
+    \setbeamercolor{structure}{fg=Deep_Blue} 
+    \setbeamercolor{titlelike}{parent=structure, bg=Deep_Blue, fg=white} 
+    \setbeamercolor{itemize item}{fg=Deep_Blue} 
+    \setbeamercolor{itemize subitem}{fg=Deep_Blue} 
+    \setbeamercolor{itemize subsubitem}{fg=Deep_Blue} 
+    \setbeamercolor{block title}{bg=Deep_Blue, fg=white} 
+    \setbeamercolor{block body}{bg=Light_Blue, fg=black} 
+}
+
+\newcommand{\setcolorschemethree}{
+    \setbeamercolor{structure}{fg=Teal} 
+    \setbeamercolor{titlelike}{parent=structure, bg=Teal, fg=white}
+    \setbeamercolor{itemize item}{fg=Teal} 
+    \setbeamercolor{itemize subitem}{fg=Teal} 
+    \setbeamercolor{itemize subsubitem}{fg=Teal}
+    \setbeamercolor{block title}{bg=Teal, fg=white}  
+    \setbeamercolor{block body}{bg=Light_Cyan, fg=black} 
+}
+
+\newcommand{\setcolorschemefour}{
+    \setbeamercolor{structure}{fg=Orange} 
+    \setbeamercolor{titlelike}{parent=structure, bg=Orange, fg=white} 
+    \setbeamercolor{itemize item}{fg=Orange} 
+    \setbeamercolor{itemize subitem}{fg=Orange} 
+    \setbeamercolor{itemize subsubitem}{fg=Orange} 
+    \setbeamercolor{block title}{bg=Orange, fg=white} 
+    \setbeamercolor{block body}{bg=Light_Orange, fg=black} 
+}
+
+\newcommand{\setcolorschemefive}{
+    \setbeamercolor{structure}{fg=Forest_Green} 
+    \setbeamercolor{titlelike}{parent=structure, bg=Forest_Green, fg=white} 
+    \setbeamercolor{itemize item}{fg=Forest_Green} 
+    \setbeamercolor{itemize subitem}{fg=Forest_Green} 
+    \setbeamercolor{itemize subsubitem}{fg=Forest_Green} 
+    \setbeamercolor{block title}{bg=Forest_Green, fg=white} 
+    \setbeamercolor{block body}{bg=Light_Green, fg=black} 
+}
+
+\newcommand{\setcolorschemesix}{
+    \setbeamercolor{structure}{fg=Steel_Blue} 
+    \setbeamercolor{titlelike}{parent=structure, bg=Steel_Blue, fg=white} 
+    \setbeamercolor{itemize item}{fg=Steel_Blue} 
+    \setbeamercolor{itemize subitem}{fg=Steel_Blue} 
+    \setbeamercolor{itemize subsubitem}{fg=Steel_Blue} 
+    \setbeamercolor{block title}{bg=Steel_Blue, fg=white} 
+    \setbeamercolor{block body}{bg=Light_Steel_Blue, fg=black} 
+}
+
+\newcommand{\setcolorschemeseven}{
+    \setbeamercolor{structure}{fg=Deep_Wine} 
+    \setbeamercolor{titlelike}{parent=structure, bg=Deep_Wine, fg=white} 
+    \setbeamercolor{itemize item}{fg=Deep_Wine} 
+    \setbeamercolor{itemize subitem}{fg=Deep_Wine} 
+    \setbeamercolor{itemize subsubitem}{fg=Deep_Wine} 
+    \setbeamercolor{block title}{bg=Deep_Wine, fg=white} 
+    \setbeamercolor{block body}{bg=White, fg=black} 
+}
+
+\newcommand{\setcolorschemeeight}{
+    \setbeamercolor{structure}{fg=Crimson} 
+    \setbeamercolor{titlelike}{parent=structure, bg=Crimson, fg=white} 
+    \setbeamercolor{itemize item}{fg=Crimson} 
+    \setbeamercolor{itemize subitem}{fg=Crimson} 
+    \setbeamercolor{itemize subsubitem}{fg=Crimson} 
+    \setbeamercolor{block title}{bg=Crimson, fg=white} 
+    \setbeamercolor{block body}{bg=White, fg=black} 
+}
+
+\newcommand{\setcolorschemenine}{
+    \setbeamercolor{structure}{fg=Indigo} 
+    \setbeamercolor{titlelike}{parent=structure, bg=Indigo, fg=white} 
+    \setbeamercolor{itemize item}{fg=Indigo} 
+    \setbeamercolor{itemize subitem}{fg=Indigo} 
+    \setbeamercolor{itemize subsubitem}{fg=Indigo} 
+    \setbeamercolor{block title}{bg=Indigo, fg=white} 
+    \setbeamercolor{block body}{bg=Light_Lavender, fg=black} 
+}
+
+\newcommand{\setcolorschemeten}{
+    \setbeamercolor{structure}{fg=Hot_Pink} 
+    \setbeamercolor{titlelike}{parent=structure, bg=Hot_Pink, fg=white} 
+    \setbeamercolor{itemize item}{fg=Hot_Pink} 
+    \setbeamercolor{itemize subitem}{fg=Hot_Pink} 
+    \setbeamercolor{itemize subsubitem}{fg=Hot_Pink} 
+    \setbeamercolor{block title}{bg=Hot_Pink, fg=white} 
+    \setbeamercolor{block body}{bg=Light_Pink, fg=black} 
+}
+
+\newcommand{\setcolorschemeeleven}{
+    \setbeamercolor{structure}{fg=Gold} 
+    \setbeamercolor{titlelike}{parent=structure, bg=Gold, fg=white} 
+    \setbeamercolor{itemize item}{fg=Gold} 
+    \setbeamercolor{itemize subitem}{fg=Gold} 
+    \setbeamercolor{itemize subsubitem}{fg=Gold} 
+    \setbeamercolor{block title}{bg=Gold, fg=white} 
+    \setbeamercolor{block body}{bg=Light_Gold, fg=black} 
+}
+
+\newcommand{\setcolorschemetwelve}{
+    \setbeamercolor{structure}{fg=Purple} 
+    \setbeamercolor{titlelike}{parent=structure, bg=Purple, fg=white} 
+    \setbeamercolor{itemize item}{fg=Purple} 
+    \setbeamercolor{itemize subitem}{fg=Purple} 
+    \setbeamercolor{itemize subsubitem}{fg=Purple} 
+    \setbeamercolor{block title}{bg=Purple, fg=white} 
+    \setbeamercolor{block body}{bg=Light_Purple, fg=black} 
+}
+
+% (Define other color schemes: \setcolorschemetwo, \setcolorschemethree, etc.)
+
+% Choose the color scheme by setting \colorschemenumber to a value from 1 to 12.
+\newcommand{\colorschemenumber}{7} % Change this number to select a different color scheme.
+
+% Implement the selection of color schemes.
+\ifcase\colorschemenumber
+  \or % case 1
+    \setcolorschemeone
+  \or % case 2
+    \setcolorschemetwo
+  \or % case 3
+    \setcolorschemethree
+  \or % case 4
+    \setcolorschemefour
+  \or % case 5
+    \setcolorschemefive
+  \or % case 6
+    \setcolorschemesix
+  \or % case 7
+    \setcolorschemeseven
+  \or % case 8
+    \setcolorschemeeight
+  \or % case 9
+    \setcolorschemenine
+  \or % case 10
+    \setcolorschemeten
+  \or % case 11
+    \setcolorschemeeleven
+  \or % case 12
+    \setcolorschemetwelve
+\fi
+
+% ===========================
+% === Font Theme Options ===
+% ===========================
+
+% Set the font theme.
+% Available options:
+% - 'professionalfonts': uses the fonts specified in the document.
+% - 'default': uses Beamer's default fonts.
+% - 'serif': uses serif fonts.
+% - 'structurebold': bolds structural elements.
+% - 'sansserif': uses only sans-serif fonts.
+% - 'serifmath': uses serif fonts in math mode.
+
+% Define the font theme here:
+\newcommand{\fonttheme}{professionalfonts} % Change this to your desired font theme.
+
+% Use the selected font theme.
+\usefonttheme{\fonttheme}
+
+% Optionally, set specific fonts (requires XeLaTeX or LuaLaTeX).
+% Uncomment the following lines if using XeLaTeX or LuaLaTeX.
+% \usepackage{fontspec}
+% \setmainfont{Times New Roman}
+% \setsansfont{Arial}
+% \setmonofont{Courier New}
+
+% ===========================================================
+%               Additional Package Imports
+% ===========================================================
+
+% Existing packages
+\usepackage{etoolbox}
+\usepackage{amsmath} % Enhanced math environment.
+\usepackage{amssymb} % Additional math symbols.
+\usepackage{mathtools} % Additional tools for mathematical typesetting.
+\usepackage{graphicx} % Including graphics.
+\usepackage{xcolor} % Colored text and boxes.
+\usepackage{tikz} % Drawing graphics.
+\usepackage{caption} % Standard captions.
+\usepackage{subcaption} % Sub-captions within a figure.
+\usepackage{listings} % Code listings.
+\usepackage{hyperref} % Hyperlinks.
+\usepackage[authoryear]{natbib} % Bibliographies and citations.
+\usepackage{booktabs} % Improved table layouts.
+\usepackage{multirow} % Control over tables.
+\usepackage{array} % Additional table features.
+\usepackage{siunitx} % Units and number formatting.
+\usepackage[english]{babel} % Multilingual support.
+\usepackage{cleveref} % Clever referencing.
+\usepackage{setspace} % Adjusting line spacing.
+\usepackage{tcolorbox} % Colored boxes.
+
+% Additional packages required for the new features
+\usepackage{appendixnumberbeamer} % For appendix numbering
+\usepackage{ifthen} % For conditional statements in header/footer customization
+% ===========================================================
+%               Custom Header/Footer Options
+% ===========================================================
+
+% Define options to customize header and footer.
+% You can set variables to include or exclude certain elements.
+
+% Header options
+\newcommand{\includeheader}{true} % Set to 'false' to remove the header.
+\newcommand{\showsectionintoc}{true} % Set to 'false' to hide sections in the header.
+
+% Footer options
+\newcommand{\includefooter}{true} % Set to 'false' to remove the footer.
+\newcommand{\showauthorinfo}{true} % Set to 'false' to hide author info in the footer.
+\newcommand{\showdateinfo}{true} % Set to 'false' to hide date info in the footer.
+\newcommand{\showpagenumber}{true} % Set to 'false' to hide page numbers in the footer.
+
+% Customize the header
+\ifthenelse{\equal{\includeheader}{true}}{
+  \setbeamertemplate{headline}{
+    % Customize the headline as desired
+    \ifthenelse{\equal{\showsectionintoc}{true}}{
+      % Include sections in the header
+      \begin{beamercolorbox}[ht=2.5ex,dp=1ex,leftskip=1em,rightskip=1em]{section in head/foot}
+        \usebeamerfont{section in head/foot}\textsc{\insertsectionnavigationhorizontal{\paperwidth}{}{}} % Use \textsc for small caps
+      \end{beamercolorbox}
+    }{
+      % Do not include sections in the header
+    }
+  }
+}{
+  % Remove the header
+  \setbeamertemplate{headline}{}
+}
+
+% Customize the footer
+\ifthenelse{\equal{\includefooter}{true}}{
+  \setbeamertemplate{footline}{
+    \leavevmode%
+    \hbox{%
+      \ifthenelse{\equal{\showauthorinfo}{true}}{
+        \begin{beamercolorbox}[wd=0.5\paperwidth,ht=2.25ex,dp=1ex,left]{author in head/foot}%
+          \usebeamerfont{author in head/foot}\textsc{\insertshortauthor}~~(\textsc{\insertshortinstitute}) % Use \textsc for small caps
+        \end{beamercolorbox}%
+      }{}
+      \begin{beamercolorbox}[wd=0.5\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+        \ifthenelse{\equal{\showdateinfo}{true}}{
+          \usebeamerfont{date in head/foot}\textsc{\insertshortdate}\hspace*{2em} % Use \textsc for small caps
+        }{}
+        \ifthenelse{\equal{\showpagenumber}{true}}{
+          \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+        }{}
+      \end{beamercolorbox}}%
+    \vskip0pt%
+  }
+}{
+  % Remove the footer
+  \setbeamertemplate{footline}{}
+}
+
+% ===========================================================
+%       Enhanced Section Title Slide Template Options
+% ===========================================================
+
+% Define options for section starting slides
+\newcommand{\sectiontitleslidebackground}{default} % Options: 'default', 'image', 'color'
+\newcommand{\sectiontitleslideimage}{path/to/your/background/image.jpg} % Path to background image
+\newcommand{\sectiontitleslidecolor}{blue} % Background color
+
+% Configure a custom section title slide for when new sections begin.
+\AtBeginSection[]{
+  \logo{} % Hide the logo on the section title slide.
+
+  % Prevent the section title slide from advancing the frame number.
+  \addtocounter{framenumber}{-1}
+
+  % Customize the section title slide background
+  \ifthenelse{\equal{\sectiontitleslidebackground}{image}}{
+    \setbeamertemplate{background}{
+      \parbox[c][\paperheight][c]{\paperwidth}{%
+        \vfill
+        \centering
+        \includegraphics[width=\paperwidth,height=\paperheight]{\sectiontitleslideimage}
+        \vfill
+      }
+    }
+  }{
+    \ifthenelse{\equal{\sectiontitleslidebackground}{color}}{
+      \setbeamercolor{background canvas}{bg=\sectiontitleslidecolor}
+    }{
+      % Use default background
+    }
+  }
+
+  \begin{frame}[plain] % Use plain frame to remove header/footer
+    \vfill
+    \centering
+    \begin{beamercolorbox}[sep=20pt, center, shadow=true, rounded=true]{title}
+      \usebeamerfont{title}\textsc{\insertsectionhead}\par % Use \textsc for small caps
+    \end{beamercolorbox}
+    \vfill
+  \end{frame}
+
+  % Restore default background
+  \setbeamertemplate{background}{}
+  \setbeamercolor{background canvas}{bg=}
+
+  % Restore the logo after the section title slide.
+  % \logo{\includegraphics[height=0.4cm]{path/to/logo.png}}
+}
+
+% ===========================================================
+%               Custom Command Definitions
+% ===========================================================
+
+% Command to highlight text with a yellow background.
+\newcommand{\highlight}[1]{\colorbox{yellow!50}{#1}}
+
+% Command to highlight notes with a pink background.
+\newcommand{\notehighlight}[1]{\colorbox{pink!50}{#1}}
+
+% Command to create a small plus sign using TikZ.
+\newcommand{\Plus}{\mathord{\begin{tikzpicture}[baseline=0ex, line width=1, scale=0.13]
+  \draw (1,0) -- (1,2);
+  \draw (0,1) -- (2,1);
+  \end{tikzpicture}}}
+
+% Command for a custom colored box with text.
+\newcommand{\custombox}[2]{\begin{tcolorbox}[colback=#1!5!white, colframe=#1!75!black]
+#2
+\end{tcolorbox}}
+
+% Command for a colored alert text.
+\newcommand{\alerttext}[1]{\textcolor{red}{\textbf{#1}}}
+
+% Command for a custom footnote with symbol.
+\newcommand{\symbolfootnote}[1]{\begingroup
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\footnote{#1}\endgroup}
+
+% Command to include code snippets with syntax highlighting.
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=5pt,
+    breaklines=true,
+    frame=single,
+    language=Python % Change to the desired programming language.
+}
+
+% ===========================================================
+%               Additional Presentation Settings
+% ===========================================================
+
+% Display navigation symbols (uncomment to show them).
+% \setbeamertemplate{navigation symbols}{}
+
+% Set the alignment of the frame title.
+% Options: left, right, center.
+% \setbeamertemplate{frametitle}[default][left]
+% \setbeamertemplate{frametitle}[default][right]
+% \setbeamertemplate{frametitle}[default][center]
+
+% Include a custom logo on each slide.
+% \logo{\includegraphics[height=1cm]{path/to/logo.png}}
+
+% Set a custom image for itemize symbols.
+% \setbeamertemplate{itemize item}{\includegraphics[height=0.3cm]{path/to/custom-bullet.png}}
+
+% Set custom text margins.
+\setbeamersize{text margin left=7mm, text margin right=7mm}
+
+% Define the path to the folder containing images.
+\graphicspath{{./images/}}
+
+% Set line spacing for better readability.
+\linespread{1.2} % Adjust as needed.
+
+% ===========================================================
+%            Title, Author, and Institute Information
+% ===========================================================
+% Title of the presentation.
+% Use \title[Short Title]{Full Title}
+\title[An Introduction to Machine Learning]{An Introduction to Machine Learning}
+
+\subtitle{\textsc{By Authors \\ Journal Full Name, Year Published}}
+
+% Author information.
+% Use \author[Short Author]{Full Name\inst{1}}
+\author[Farnam Taheri]{Amirreza "Farnam" Taheri\inst{1}}
+
+% Institute information.
+\institute[TeIAS]{\inst{1} Department of Economics, Tehran Institute for Advanced Studies}
+
+
+
+% Add a logo to the title slide.
+\titlegraphic{\includegraphics[height=0.8cm]{TEIAS-LOGO.png}}
+
+% Date of the presentation.
+\date[Nov 2024]{\small \today}
+
+% ===========================================================
+%              Begin Document
+% ===========================================================
+
+\begin{document}
+% Remove navigation symbols for all slides.
+\setbeamertemplate{navigation symbols}{}
+
+% ===========================================================
+%                Title Frame
+% ===========================================================
+% Re-enable headline and footline for following slides
+
+\begin{frame}[plain, noframenumbering]
+    \titlepage % Generates the title page.
+\end{frame}
+
+%  ==========================================
+%              Motication frames
+%  ==========================================
+
+\begin{frame}{\textsc{Motivation}}
+  \begin{itemize}
+      \item Motivation
+      \pause
+      \vspace*{0.3cm}
+      \item Continued
+  \end{itemize}
+\end{frame}
+
+
+% ===========================================================
+%                Outline Frame
+% ===========================================================
+
+\begin{frame}{\textsc{Outline}}
+  \tableofcontents % Generates the table of contents.
+\end{frame}
+
+% ===========================================================
+%             Section Title Slide Template
+% ===========================================================
+
+% (Already configured in the preamble.)
+
+% ===========================================================
+%             Content Frames
+% ===========================================================
+
+\section{Introduction}
+
+\begin{frame}{\textsc{Introduction}}
+  \begin{itemize}
+    \item \textbf{What is Machine Learning?}
+    \begin{itemize}
+      \item A subset of artificial intelligence that provides systems the ability to automatically learn and improve from experience without being explicitly programmed.
+    \end{itemize}
+    \item \textbf{Why is it Important?}
+    \begin{itemize}
+      \item Enables computers to find hidden insights without being explicitly programmed where to look.
+    \end{itemize}
+    \item \textbf{Applications}
+    \begin{itemize}
+      \item Image recognition, speech recognition, medical diagnosis, stock market trading, etc.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section[Types]{Types of Machine Learning}
+
+\begin{frame}{\textsc{Types of Machine Learning}}
+  \begin{itemize}
+    \item \textbf{Supervised Learning}
+    \begin{itemize}
+      \item The model is trained on labeled data.
+      \item Examples: Regression, Classification.
+    \end{itemize}
+    \item \textbf{Unsupervised Learning}
+    \begin{itemize}
+      \item The model is trained on unlabeled data.
+      \item Examples: Clustering, Association.
+    \end{itemize}
+    \item \textbf{Reinforcement Learning}
+    \begin{itemize}
+      \item The model learns through rewards and punishments.
+      \item Examples: Game AI, Robotics.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section[Supervised]{Supervised Learning Algorithms}
+
+\begin{frame}{\textsc{Supervised Learning Algorithms}}
+  \begin{itemize}
+    \item \textbf{Linear Regression}
+    \item \textbf{Logistic Regression}
+    \item \textbf{Decision Trees}
+    \item \textbf{Support Vector Machines}
+    \item \textbf{Neural Networks}
+  \end{itemize}
+\end{frame}
+
+\section[Unsupervised]{Unsupervised Learning Algorithms}
+
+\begin{frame}{\textsc{Unsupervised Learning Algorithms}}
+  \begin{itemize}
+    \item \textbf{K-Means Clustering}
+    \item \textbf{Hierarchical Clustering}
+    \item \textbf{Principal Component Analysis (PCA)}
+    \item \textbf{Anomaly Detection}
+  \end{itemize}
+\end{frame}
+
+\section[Applications]{Applications of Machine Learning}
+
+\begin{frame}{\textsc{Applications of Machine Learning}}
+  \begin{itemize}
+    \item \textbf{Healthcare}
+    \begin{itemize}
+      \item Disease prediction, personalized medicine.
+    \end{itemize}
+    \item \textbf{Finance}
+    \begin{itemize}
+      \item Fraud detection, algorithmic trading.
+    \end{itemize}
+    \item \textbf{Transportation}
+    \begin{itemize}
+      \item Autonomous vehicles, traffic prediction.
+    \end{itemize}
+    \item \textbf{Retail}
+    \begin{itemize}
+      \item Customer segmentation, demand forecasting.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{\textsc{Conclusion}}
+  \begin{itemize}
+    \item Machine learning is transforming industries by enabling data-driven decisions.
+    \item Understanding the basics is essential for leveraging its full potential.
+    \item Continuous learning and adaptation are key in this rapidly evolving field.
+  \end{itemize}
+\end{frame}
+
+% ===========================================================
+%            Sample Frames with Different Content
+% ===========================================================
+
+% Frame with highlighted content.
+\begin{frame}{\textsc{Key Takeaways}}
+  \highlight{Machine Learning} is a powerful tool for extracting insights from data.
+
+  \begin{itemize}
+    \item It is essential to choose the right algorithm for the task.
+    \item Data quality significantly impacts model performance.
+    \item Ethical considerations are crucial when applying machine learning.
+  \end{itemize}
+
+  \notehighlight{Note:} Always validate your models with real-world data.
+\end{frame}
+
+% Frame with a colored box using the custom command.
+\begin{frame}{\textsc{Important Considerations}}
+  \custombox{Rich_Red}{
+    \begin{itemize}
+      \item \textbf{Bias and Fairness:} Ensure your models do not perpetuate biases.
+      \item \textbf{Privacy:} Protect sensitive data and comply with regulations.
+      \item \textbf{Interpretability:} Strive for models that are explainable.
+    \end{itemize}
+  }
+\end{frame}
+
+% Frame with mathematical equations.
+\begin{frame}{\textsc{Mathematical Foundations}}
+  \textbf{Linear Regression Model:}
+  \begin{equation}
+    y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_n x_n + \epsilon
+  \end{equation}
+  \begin{itemize}
+    \item $y$: Dependent variable
+    \item $x_i$: Independent variables
+    \item $\beta_i$: Coefficients
+    \item $\epsilon$: Error term
+  \end{itemize}
+
+  \textbf{Cost Function:}
+  \begin{equation}
+    J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} (h_{\theta}(x^{(i)}) - y^{(i)})^2
+  \end{equation}
+  \begin{itemize}
+    \item $J(\theta)$: Cost function
+    \item $h_{\theta}(x)$: Hypothesis function
+    \item $m$: Number of training examples
+  \end{itemize}
+\end{frame}
+
+% Frame with code listing.
+\begin{frame}[fragile]{\textsc{Code Example: Linear Regression in Python}}
+  \begin{lstlisting}[language=Python]
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# Sample data
+X = np.array([[1, 1], [1, 2], [2, 2], [2, 3]])
+y = np.dot(X, np.array([1, 2])) + 3
+
+# Create model and fit
+model = LinearRegression().fit(X, y)
+
+# Predictions
+predictions = model.predict(X)
+print(predictions)
+  \end{lstlisting}
+\end{frame}
+
+% % Frame with an image.
+% \begin{frame}{\textsc{Machine Learning Workflow}}
+%   \begin{figure}
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{ml_workflow.png}
+%     \caption{Typical steps in a machine learning project.}
+%   \end{figure}
+% \end{frame}
+
+% Frame with a table.
+\begin{frame}{\textsc{Comparison of Algorithms}}
+  \begin{table}[h!]
+    \centering
+    \begin{tabular}{lccc}
+      \toprule
+      \textbf{Algorithm} & \textbf{Type} & \textbf{Complexity} & \textbf{Interpretability} \\
+      \midrule
+      Linear Regression & Regression & Low & High \\
+      Decision Trees & Both & Medium & Medium \\
+      Neural Networks & Both & High & Low \\
+      \bottomrule
+    \end{tabular}
+    \caption{Comparison of common machine learning algorithms.}
+  \end{table}
+\end{frame}
+
+% % Frame with multiple images.
+% \begin{frame}{\textsc{Visualization Examples}}
+%   \begin{figure}
+%     \centering
+%     \begin{subfigure}{0.45\textwidth}
+%       \centering
+%       \includegraphics[width=\textwidth]{scatter_plot.png}
+%       \caption{Scatter Plot}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}{0.45\textwidth}
+%       \centering
+%       \includegraphics[width=\textwidth]{confusion_matrix.png}
+%       \caption{Confusion Matrix}
+%     \end{subfigure}
+%     \caption{Common visualizations in machine learning.}
+%   \end{figure}
+% \end{frame}
+
+% ===========================================================
+%             Thank You Slide
+% ===========================================================
+
+\section*{} % Empty section for Thank You slide.
+
+\begin{frame}[plain, noframenumbering]
+  \vfill
+  \centering
+  \textcolor{Rich_Red}{\Huge\scshape{Thank You!}}
+  \vfill
+
+  % Insert the logo as a figure
+  \begin{figure}[h!]
+    \includegraphics[height=1.5cm]{TEIAS-LOGO}
+  \end{figure}
+
+% Re-enable headline and footline for following slides
+\setbeamertemplate{headline}[miniframes theme]
+\setbeamertemplate{footline}[miniframes theme]
+
+% Remove title graphic
+\titlegraphic{}
+\end{frame}
+
+% ===========================================================
+%             References Slide
+% ===========================================================
+\begin{frame}[allowframebreaks]{\textsc{References}}
+  \bibliographystyle{abbrvnat}
+  \bibliography{references} % Make sure to create a 'references.bib' file.
+\end{frame}
+
+% ===========================================================
+%             Appendix Section
+% ===========================================================
+
+% Start the appendix
+\appendix
+
+\section*{Appendix}
+
+\begin{frame}{\textsc{Additional Resources}}
+  \begin{itemize}
+    \item Books:
+    \begin{itemize}
+      \item \emph{Pattern Recognition and Machine Learning} by Christopher M. Bishop
+      \item \emph{Machine Learning: A Probabilistic Perspective} by Kevin P. Murphy
+    \end{itemize}
+    \item Online Courses:
+    \begin{itemize}
+      \item Coursera: Machine Learning by Andrew Ng
+      \item edX: Introduction to Artificial Intelligence (AI)
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\textsc{Mathematical Background}}
+  \begin{itemize}
+    \item \textbf{Probability and Statistics}
+    \item \textbf{Linear Algebra}
+    \item \textbf{Calculus}
+    \item \textbf{Optimization Techniques}
+  \end{itemize}
+\end{frame}
+
+% ===========================================================
+%              End of Document
+% ===========================================================
+
+\end{document}
