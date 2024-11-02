@@ -1,6 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Welcome to the **Beamer Presentation Template**, a comprehensive and highly customizable LaTeX template designed to help you create professional, visually appealing presentations effortlessly. This template is ideal for academic lectures, research presentations, business meetings, and more.
+# Beamer Presentation Template
+
+Welcome to the **Beamer Presentation Template**! This is a comprehensive and highly customizable LaTeX Beamer template designed to help you create professional, visually appealing presentations with ease. Whether you're preparing for academic lectures, research presentations, business meetings, or any other type of presentation, this template provides a robust foundation to build upon.
 
 ## Table of Contents
 
@@ -37,52 +39,102 @@ Welcome to the **Beamer Presentation Template**, a comprehensive and highly cust
 
 ## Overview
 
-This Beamer template provides a solid foundation with a plethora of customization options to suit your presentation needs. It includes multiple themes, color schemes, font options, and additional features that enhance the overall look and functionality of your slides.
+This Beamer template provides a solid foundation with a plethora of customization options to suit your presentation needs. It includes multiple themes, color schemes, font options, and additional features that enhance the overall look and functionality of your slides. By utilizing this template, you can save time and ensure consistency across your slides, while also having the flexibility to tailor the presentation to your preferences.
 
 ### Repository Information
 
-- **Repository Name:** beamer-template
-- **Repository URL:** [https://github.com/AmirrezaFarnamTaheri/beamer-template.git](https://github.com/AmirrezaFarnamTaheri/beamer-template.git)
+- **Repository Name:** `beamer-template`
+- **Repository URL:** [https://github.com/AmirrezaFarnamTaheri/beamer-template](https://github.com/AmirrezaFarnamTaheri/beamer-template)
 - **Hosting Platform:** GitHub
 
 ---
 
 ## Key Features
 
-- **Customizable Themes**
-  - **Outer Themes:** `shadow`, `smoothbars`, `split`, `sidebar`, `tree`, `miniframes`, `default`
-  - **Inner Themes:** `rounded`, `rectangles`, `inmargin`, `circles`
-- **Extensive Color Schemes**
-  - 12 predefined color schemes with artistic choices
-  - Ability to define custom color schemes
-- **Flexible Layouts**
-  - Support for different aspect ratios (e.g., 4:3, 16:9 widescreen)
-  - Handout version without overlays
-  - Navigation styles with or without mini frames
-- **Enhanced Functionality**
-  - Integrated packages for mathematics (`amsmath`, `amssymb`, `mathtools`)
-  - Graphics and drawing support (`graphicx`, `tikz`)
-  - Code listings with syntax highlighting (`listings`)
-  - Table enhancements (`booktabs`, `multirow`, `array`)
-- **Custom Header/Footer**
-  - Options to include or exclude headers and footers
-  - Customizable content in headers and footers
-- **Section Title Slides**
-  - Automatic creation of section title slides
-  - Customizable backgrounds: default, image, or color
-- **Reusable Commands**
-  - Commands for highlighting text, custom boxes, alerts, and more
-- **Appendix Support**
-  - Seamless addition of appendix sections with proper numbering
-- **Font Customization**
-  - Options for professional fonts, serif, sans-serif, and more
-  - Advanced font settings using `fontspec` (with `xelatex` or `lualatex`)
-- **Custom Bullets and Logos**
-  - Ability to include custom bullet points and logos on each slide
-- **Frame Title Alignment**
-  - Options to align frame titles to left, right, or center
-- **Support for Short and Long Section Names**
-  - Define short and long formats for section names to control display in navigation and content
+### Customizable Themes
+
+#### Outer Themes
+
+Modify the outer appearance of your slides with options like:
+
+- `shadow`
+- `smoothbars`
+- `split`
+- `sidebar`
+- `tree`
+- `miniframes`
+- `default`
+
+These themes alter navigation bars, frame transitions, and the overall slide structure to suit your presentation style.
+
+#### Inner Themes
+
+Adjust the inner elements of your slides with themes such as:
+
+- `rounded`
+- `rectangles`
+- `inmargin`
+- `circles`
+
+Inner themes affect the styling of items like blocks, lists, and the appearance of content within frames.
+
+### Extensive Color Schemes
+
+Choose from 12 predefined artistic color schemes, or define your own custom schemes to match your branding or personal preference. Each color scheme carefully pairs foreground and background colors for optimal readability and aesthetic appeal.
+
+### Flexible Layouts
+
+- **Aspect Ratios**: Support for different aspect ratios, including standard (4:3) and widescreen (16:9).
+- **Handout Version**: Generate handouts without overlays, suitable for printing or sharing as PDFs.
+- **Navigation Styles**: Choose navigation styles with or without mini frames, and customize headers and footers.
+
+### Enhanced Functionality
+
+- **Mathematical Typesetting**: Integrated packages for mathematics (`amsmath`, `amssymb`, `mathtools`).
+- **Graphics Support**: Include graphics and draw vector images using `graphicx` and `tikz`.
+- **Code Listings**: Add code snippets with syntax highlighting using the `listings` package.
+- **Table Enhancements**: Create professional-quality tables with `booktabs`, `multirow`, and `array`.
+
+### Custom Header/Footer
+
+- **Customizable Content**: Options to include or exclude headers and footers, and to customize their content.
+- **Dynamic Information**: Display author, date, page numbers, and section titles in the header or footer.
+
+### Section Title Slides
+
+- **Automatic Section Slides**: Automatically create section title slides when new sections begin.
+- **Customizable Backgrounds**: Customize section title slides with default backgrounds, images, or solid colors.
+
+### Reusable Commands
+
+Utilize predefined commands for:
+
+- Highlighting text
+- Creating custom boxes and alerts
+- Including custom symbols
+- Formatting footnotes
+
+### Appendix Support
+
+Seamlessly add appendix sections with proper numbering and inclusion in the table of contents.
+
+### Font Customization
+
+- **Font Themes**: Options for professional fonts, serif, sans-serif, and more.
+- **Advanced Font Settings**: Use `fontspec` with `XeLaTeX` or `LuaLaTeX` for advanced font customization.
+
+### Custom Bullets and Logos
+
+- **Custom Bullet Points**: Replace default bullet points with custom images.
+- **Slide Logos**: Include custom logos on each slide, such as institutional or company logos.
+
+### Frame Title Alignment
+
+Set the alignment of frame titles to left, right, or center, according to your preference.
+
+### Support for Short and Long Section Names
+
+Define short and long formats for section names to control their display in navigation and content.
 
 ---
 
@@ -91,7 +143,7 @@ This Beamer template provides a solid foundation with a plethora of customizatio
 To use this Beamer template effectively, ensure you have the following installed:
 
 - **LaTeX Distribution**: [TeX Live](https://www.tug.org/texlive/), [MiKTeX](https://miktex.org/), or [MacTeX](https://www.tug.org/mactex/)
-- **Compiler**: `pdflatex` (basic usage), `xelatex`, or `lualatex` (for advanced font customization)
+- **Compiler**: `pdflatex` (for basic usage), `xelatex`, or `lualatex` (for advanced font customization)
 - **Text Editor**: Any LaTeX-compatible editor such as [Overleaf](https://www.overleaf.com/), [TeXstudio](https://www.texstudio.org/), [Visual Studio Code](https://code.visualstudio.com/) with LaTeX extensions, etc.
 
 ---
@@ -186,18 +238,18 @@ To use this Beamer template effectively, ensure you have the following installed
 
 - **Color Schemes Include**:
 
-  1. Rich Red & Light Pink
-  2. Deep Blue & Light Blue
-  3. Teal & Light Cyan
-  4. Orange & Light Orange
-  5. Forest Green & Light Green
-  6. Steel Blue & Light Steel Blue
-  7. Deep Wine & White
-  8. Crimson & White
-  9. Indigo & Light Lavender
-  10. Hot Pink & Light Pink
-  11. Gold & Light Gold
-  12. Purple & Light Purple
+  1. **Rich Red** & **Light Pink**
+  2. **Deep Blue** & **Light Blue**
+  3. **Teal** & **Light Cyan**
+  4. **Orange** & **Light Orange**
+  5. **Forest Green** & **Light Green**
+  6. **Steel Blue** & **Light Steel Blue**
+  7. **Deep Wine** & **White**
+  8. **Crimson** & **White**
+  9. **Indigo** & **Light Lavender**
+  10. **Hot Pink** & **Light Pink**
+  11. **Gold** & **Light Gold**
+  12. **Purple** & **Light Purple**
 
 ### Customizing Header and Footer
 
@@ -238,7 +290,11 @@ You can provide both short and long names for sections to control how they appea
 \section[Intro]{Introduction to Machine Learning}
 ```
 
+This allows you to have concise labels in navigation elements while providing full titles in the content.
+
 #### Creating Frames
+
+Create individual slides (frames) using the `frame` environment:
 
 ```latex
 \begin{frame}{\textsc{Introduction}}
@@ -254,10 +310,10 @@ You can provide both short and long names for sections to control how they appea
   You can set the alignment of the frame title by adjusting the `frametitle` template:
 
   ```latex
-  \setbeamertemplate{frametitle}[default][left]
+  \setbeamertemplate{frametitle}[default][left]   % Align left
+  \setbeamertemplate{frametitle}[default][center] % Align center
+  \setbeamertemplate{frametitle}[default][right]  % Align right
   ```
-
-  Options: `left`, `right`, `center`.
 
 - **Including a Logo on Each Slide**:
 
@@ -306,8 +362,8 @@ You can provide both short and long names for sections to control how they appea
 Define your own colors using the `\definecolor` command:
 
 ```latex
-\definecolor{My_Custom_Color}{RGB}{123, 45, 67} % Define a new color
-\definecolor{Light_Custom_Color}{RGB}{230, 200, 210} % Define a light variant
+\definecolor{MyCustomColor}{RGB}{123, 45, 67}       % Define a new color
+\definecolor{LightCustomColor}{RGB}{230, 200, 210}  % Define a light variant
 ```
 
 ### Adding New Color Schemes
@@ -316,11 +372,11 @@ Define your own colors using the `\definecolor` command:
 
    ```latex
    \newcommand{\setcolorschemecustom}{
-       \setbeamercolor{structure}{fg=My_Custom_Color}
-       \setbeamercolor{titlelike}{parent=structure, bg=My_Custom_Color, fg=white}
-       \setbeamercolor{itemize item}{fg=My_Custom_Color}
-       \setbeamercolor{block title}{bg=My_Custom_Color, fg=white}
-       \setbeamercolor{block body}{bg=Light_Custom_Color, fg=black}
+       \setbeamercolor{structure}{fg=MyCustomColor}
+       \setbeamercolor{titlelike}{parent=structure, bg=MyCustomColor, fg=white}
+       \setbeamercolor{itemize item}{fg=MyCustomColor}
+       \setbeamercolor{block title}{bg=MyCustomColor, fg=white}
+       \setbeamercolor{block body}{bg=LightCustomColor, fg=black}
    }
    ```
 
@@ -346,7 +402,7 @@ Define your own colors using the `\definecolor` command:
 
 ### Modifying Fonts
 
-For advanced font customization using `xelatex` or `lualatex`:
+For advanced font customization using `XeLaTeX` or `LuaLaTeX`:
 
 1. **Uncomment the Fontspec Package**:
 
@@ -375,13 +431,15 @@ For advanced font customization using `xelatex` or `lualatex`:
 
 ### Mathematical Equations
 
-Utilize `amsmath`, `amssymb`, and `mathtools` for typesetting:
+Utilize `amsmath`, `amssymb`, and `mathtools` for advanced mathematical typesetting:
 
 ```latex
 \begin{equation}
   E = mc^2
 \end{equation}
 ```
+
+Include equations, alignments, and matrices as needed.
 
 ### Code Listings
 
@@ -406,6 +464,8 @@ print(predictions)
   \end{lstlisting}
 \end{frame}
 ```
+
+Ensure to include the `[fragile]` option in the `frame` environment when using `lstlisting`.
 
 ### Inserting Images and Tables
 
@@ -517,7 +577,7 @@ Utilize predefined commands to enhance your content:
   **Usage:**
 
   ```latex
-  \custombox{Rich_Red}{
+  \custombox{RichRed}{
     \begin{itemize}
       \item Point 1
       \item Point 2
@@ -556,7 +616,7 @@ The template includes the following packages:
 
 - **Typography and Fonts**:
 
-  - `fontspec` (requires `xelatex` or `lualatex`) - Advanced font selection
+  - `fontspec` (requires `XeLaTeX` or `LuaLaTeX`) - Advanced font selection
   - `setspace` - Line spacing adjustments
   - `tcolorbox` - Colored boxes with enhanced features
 
@@ -582,38 +642,40 @@ The template includes the following packages:
   - `ifthen` - Conditional commands
   - `cleveref` - Intelligent cross-referencing
 
+For more information on each package, refer to their documentation on [CTAN](https://www.ctan.org/).
+
 ---
 
 ## Troubleshooting
 
 - **Compilation Errors**:
 
-  - Ensure all packages are installed. Use a comprehensive LaTeX distribution like TeX Live or MiKTeX.
-  - For missing packages, use the package manager to install them.
+  - **Missing Packages**: Ensure all required packages are installed. Use the package manager included with your LaTeX distribution to install missing packages.
+  - **Outdated Distribution**: Update your LaTeX distribution to the latest version to ensure compatibility.
 
 - **Images Not Found**:
 
-  - Verify that images are in the correct directory (`images/`).
-  - Ensure that image file paths are correctly specified in the code.
+  - **Incorrect Paths**: Verify that image file paths are correctly specified, and that the images are located in the `images/` directory.
+  - **Unsupported Formats**: Ensure images are in a format supported by your compiler (`.png`, `.jpg`, `.pdf`).
 
 - **Font Issues**:
 
-  - If using custom fonts, compile with `xelatex` or `lualatex`.
-  - Ensure the fonts are installed on your system.
+  - **Custom Fonts Not Applied**: If using custom fonts, compile with `XeLaTeX` or `LuaLaTeX` instead of `pdfLaTeX`.
+  - **Missing Fonts**: Ensure the fonts are installed on your system.
 
 - **Bibliography Not Displaying**:
 
-  - Ensure `references.bib` exists and is correctly formatted.
-  - Run `bibtex` as part of the compilation process.
+  - **Bibliography File**: Ensure `references.bib` exists and is correctly formatted.
+  - **Compilation Order**: Run `bibtex` as part of the compilation process to generate the bibliography.
 
 - **Header/Footer Not Displaying Correctly**:
 
-  - Check the boolean flags (`\includeheader`, `\includefooter`) in the preamble.
-  - Verify that the `ifthen` package is included.
+  - **Boolean Flags**: Check the boolean flags (`\includeheader`, `\includefooter`) in the preamble.
+  - **Package Inclusion**: Verify that the `ifthen` package is included.
 
 - **Navigation Symbols Not Showing**:
 
-  - By default, navigation symbols are hidden. To display them, comment out or remove:
+  - **Default Setting**: By default, navigation symbols are hidden. To display them, comment out or remove:
 
     ```latex
     \setbeamertemplate{navigation symbols}{}
@@ -621,7 +683,7 @@ The template includes the following packages:
 
 - **Frame Numbering Issues**:
 
-  - For frames where you don't want the frame number to appear, use:
+  - **Suppressing Frame Numbers**: For frames where you don't want the frame number to appear, use:
 
     ```latex
     \begin{frame}[plain, noframenumbering]
@@ -629,11 +691,11 @@ The template includes the following packages:
 
 - **Appendix Numbering**:
 
-  - Ensure that you use `\appendix` before starting the appendix sections.
+  - **Starting the Appendix**: Ensure that you use `\appendix` before starting the appendix sections to reset numbering.
 
 - **Date Formatting**:
 
-  - Set the date manually if you don't want to use `\today`:
+  - **Custom Date**: Set the date manually if you don't want to use `\today`:
 
     ```latex
     \date[Nov 2024]{November 2024}
@@ -673,10 +735,10 @@ Contributions are welcome! Please follow these guidelines:
 
 ### Contribution Guidelines
 
-- **Coding Standards**: Follow standard LaTeX coding conventions.
+- **Coding Standards**: Follow standard LaTeX coding conventions and maintain consistent formatting.
 - **Branch Naming**: Use descriptive names like `feature/new-theme` or `bugfix/header-issue`.
 - **Documentation**: Update the README and comment your code where applicable.
-- **Code of Conduct**: Be respectful and considerate in communications.
+- **Code of Conduct**: Be respectful and considerate in communications. Follow the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).
 
 ---
 
@@ -684,16 +746,17 @@ Contributions are welcome! Please follow these guidelines:
 
 This project is licensed under the **MIT License**. You are free to use, modify, and distribute this template in your projects.
 
-[View License](LICENSE)
+[View the Full License](LICENSE)
 
 ---
 
 ## Acknowledgements
 
-- **Beamer**: [https://ctan.org/pkg/beamer](https://ctan.org/pkg/beamer) - The LaTeX class for creating presentations.
-- **Overleaf**: [https://www.overleaf.com/](https://www.overleaf.com/) - Online LaTeX editor.
+- **Beamer Class**: [Beamer](https://ctan.org/pkg/beamer) - The LaTeX class for creating presentations.
+- **Overleaf**: [Overleaf](https://www.overleaf.com/) - Online LaTeX editor.
 - **LaTeX Community**: For continuous support and resources.
 - **Contributors**: Special thanks to all contributors who have improved this template.
+- **Open Source Packages**: Gratitude to the maintainers of the LaTeX packages used in this template.
 
 ---
 
@@ -705,6 +768,7 @@ For questions, suggestions, or feedback, please contact:
 
 - **Email**: [TaheriFarnam@gmail.com](mailto:TaheriFarnam@gmail.com)
 - **GitHub**: [AmirrezaFarnamTaheri](https://github.com/AmirrezaFarnamTaheri)
+- **LinkedIn**: [Amirreza Taheri](https://www.linkedin.com/in/amirrezataheri/)
 
 ---
 
@@ -724,6 +788,8 @@ For questions, suggestions, or feedback, please contact:
 
 MIT License
 
+[Full License Text](LICENSE)
+
 ---
 
 # Acknowledgements
@@ -731,3 +797,9 @@ MIT License
 - **Beamer Class**: The foundation of this template.
 - **LaTeX Community**: For the wealth of knowledge and support.
 - **All Users**: Thank you for using and contributing to this template.
+
+---
+
+# Shortcuts for Quick Navigation
+
+- **[Back to Top](#beamer-presentation-template)**
