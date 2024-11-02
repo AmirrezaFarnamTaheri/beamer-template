@@ -768,7 +768,7 @@ For questions, suggestions, or feedback, please contact:
 
 - **Email**: [TaheriFarnam@gmail.com](mailto:TaheriFarnam@gmail.com)
 - **GitHub**: [AmirrezaFarnamTaheri](https://github.com/AmirrezaFarnamTaheri)
-- **LinkedIn**: [Amirreza Taheri](https://www.linkedin.com/in/amirreza-farnam-taheri/)
+- **LinkedIn**: [Amirreza Farnam Taheri](https://www.linkedin.com/in/amirreza-farnam-taheri-2691b1201/)
 
 ---
 
